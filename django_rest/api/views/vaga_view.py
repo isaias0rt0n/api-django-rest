@@ -1,5 +1,6 @@
 from rest_framework.pagination import LimitOffsetPagination, PageNumberPagination
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from ..serializers import vagas_serializer
@@ -9,6 +10,8 @@ from ..pagination import PaginacaoCustomizada
 
 
 class VagaList(APIView):
+    permission_classes = [IsAuthenticated] #exige autenticação
+
     def get(self, request, format=None):
         paginacao = PaginacaoCustomizada()
         vagas = vaga_service.listar_vagas()
