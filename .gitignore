@@ -1,0 +1,4 @@
+venv
+.idea
+./django_rest/notes.txt
+./django_rest/db.sqlite3

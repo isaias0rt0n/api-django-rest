@@ -1,0 +1,4 @@
+Divisão de tarefas
+1 -> Serializer responsável por validar os dados
+2 -> Service responsável por usar ORM e cadastrar no Banco de dados
+3 -> Views responsável por capturar os dados da requisição enviar para {1} pegar os dados válidos enviar para {2}
